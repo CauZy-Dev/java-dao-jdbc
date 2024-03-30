@@ -49,6 +49,14 @@ public class Program {
 		System.out.println(sellerDao.findById(2));
 		sellerDao.updated(new Seller(2, "Greg", "greg@gmail.com",new Date(), 4000.0, new Department(2, null) ));
 		System.out.println(sellerDao.findById(2));
+		
+		System.out.println();
+		System.out.println("===teste 6: seller delete");
+		sellerDao.deleteById(1);;
+		list = sellerDao.findAll();
+		for(Seller obj : list) {
+			System.out.println(obj);
+		}
 	}
 
 }
